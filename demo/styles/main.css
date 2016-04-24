@@ -1,0 +1,20 @@
+#page {
+    width: 802px;
+    margin: 0 auto;
+}
+
+#page > h1 {
+    font-family: 'Menlo', Monaco, Consolas, 'Courier New', monospace;
+    border-bottom: 1px solid #000;
+    font-weight: 400;
+}
+
+#page > h1 > a {
+    color: #718C00;
+    transition: 0.5s all;
+    text-decoration: none;
+}
+
+#page > h1 > a:hover {
+    color: #C82829;
+}
