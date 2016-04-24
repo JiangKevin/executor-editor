@@ -113,11 +113,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _toolbar = __webpack_require__(/*! ./toolbar */ 2);
+	var _toolbar = __webpack_require__(/*! ./editor/toolbar */ 2);
 	
 	var _toolbar2 = _interopRequireDefault(_toolbar);
 	
-	var _executeManager = __webpack_require__(/*! ./common/execute-manager */ 3);
+	var _executeManager = __webpack_require__(/*! ./helpers/execute-manager */ 3);
 	
 	var _executeManager2 = _interopRequireDefault(_executeManager);
 	
@@ -125,27 +125,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _aceHelper2 = _interopRequireDefault(_aceHelper);
 	
-	var _autoEvaluateCheckbox = __webpack_require__(/*! ./toolbar/auto-evaluate-checkbox */ 303);
+	var _autoEvaluateCheckbox = __webpack_require__(/*! ./toolbar-controls/auto-evaluate-checkbox */ 303);
 	
 	var _autoEvaluateCheckbox2 = _interopRequireDefault(_autoEvaluateCheckbox);
 	
-	var _executeButton = __webpack_require__(/*! ./toolbar/execute-button */ 304);
+	var _executeButton = __webpack_require__(/*! ./toolbar-controls/execute-button */ 304);
 	
 	var _executeButton2 = _interopRequireDefault(_executeButton);
 	
-	var _fontSizeInput = __webpack_require__(/*! ./toolbar/font-size-input */ 305);
+	var _fontSizeInput = __webpack_require__(/*! ./toolbar-controls/font-size-input */ 305);
 	
 	var _fontSizeInput2 = _interopRequireDefault(_fontSizeInput);
 	
-	var _layoutSwitcher = __webpack_require__(/*! ./toolbar/layout-switcher */ 306);
+	var _layoutSwitcher = __webpack_require__(/*! ./toolbar-controls/layout-switcher */ 306);
 	
 	var _layoutSwitcher2 = _interopRequireDefault(_layoutSwitcher);
 	
-	var _maximizeButton = __webpack_require__(/*! ./toolbar/maximize-button */ 307);
+	var _maximizeButton = __webpack_require__(/*! ./toolbar-controls/maximize-button */ 307);
 	
 	var _maximizeButton2 = _interopRequireDefault(_maximizeButton);
 	
-	var _selectEnvironment = __webpack_require__(/*! ./toolbar/select-environment */ 308);
+	var _selectEnvironment = __webpack_require__(/*! ./toolbar-controls/select-environment */ 308);
 	
 	var _selectEnvironment2 = _interopRequireDefault(_selectEnvironment);
 	
@@ -322,9 +322,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 2 */
-/*!********************************!*\
-  !*** ./lib/scripts/toolbar.js ***!
-  \********************************/
+/*!***************************************!*\
+  !*** ./lib/scripts/editor/toolbar.js ***!
+  \***************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -372,9 +372,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 3 */
-/*!***********************************************!*\
-  !*** ./lib/scripts/common/execute-manager.js ***!
-  \***********************************************/
+/*!************************************************!*\
+  !*** ./lib/scripts/helpers/execute-manager.js ***!
+  \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -66260,9 +66260,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 303 */
-/*!*******************************************************!*\
-  !*** ./lib/scripts/toolbar/auto-evaluate-checkbox.js ***!
-  \*******************************************************/
+/*!****************************************************************!*\
+  !*** ./lib/scripts/toolbar-controls/auto-evaluate-checkbox.js ***!
+  \****************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66314,9 +66314,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 304 */
-/*!***********************************************!*\
-  !*** ./lib/scripts/toolbar/execute-button.js ***!
-  \***********************************************/
+/*!********************************************************!*\
+  !*** ./lib/scripts/toolbar-controls/execute-button.js ***!
+  \********************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66360,9 +66360,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 305 */
-/*!************************************************!*\
-  !*** ./lib/scripts/toolbar/font-size-input.js ***!
-  \************************************************/
+/*!*********************************************************!*\
+  !*** ./lib/scripts/toolbar-controls/font-size-input.js ***!
+  \*********************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66415,9 +66415,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 306 */
-/*!************************************************!*\
-  !*** ./lib/scripts/toolbar/layout-switcher.js ***!
-  \************************************************/
+/*!*********************************************************!*\
+  !*** ./lib/scripts/toolbar-controls/layout-switcher.js ***!
+  \*********************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66489,9 +66489,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 307 */
-/*!************************************************!*\
-  !*** ./lib/scripts/toolbar/maximize-button.js ***!
-  \************************************************/
+/*!*********************************************************!*\
+  !*** ./lib/scripts/toolbar-controls/maximize-button.js ***!
+  \*********************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66560,9 +66560,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 308 */
-/*!***************************************************!*\
-  !*** ./lib/scripts/toolbar/select-environment.js ***!
-  \***************************************************/
+/*!************************************************************!*\
+  !*** ./lib/scripts/toolbar-controls/select-environment.js ***!
+  \************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -66762,7 +66762,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"deploy": "node ./tasks/deploy.js"
 		},
 		"devDependencies": {
-			"babel-core": "^6.7.6",
+			"babel-core": "^6.7.7",
 			"babel-eslint": "^4.1.8",
 			"babel-loader": "^6.2.4",
 			"babel-polyfill": "^6.7.4",
