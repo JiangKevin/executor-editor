@@ -61,9 +61,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// Import default styles.
 	
-	var _executor = __webpack_require__(/*! ./scripts/executor */ 1);
+	var _executorManager = __webpack_require__(/*! ./scripts/executor-manager */ 1);
 	
-	var _executor2 = _interopRequireDefault(_executor);
+	var _executorManager2 = _interopRequireDefault(_executorManager);
+	
+	var _package = __webpack_require__(/*! ../package.json */ 311);
+	
+	var _package2 = _interopRequireDefault(_package);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -78,7 +82,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	__webpack_require__(/*! ../bower_components/ace-builds/src-min/mode-javascript */ 319);
 	__webpack_require__(/*! ../bower_components/ace-builds/src-min/theme-tomorrow */ 320);
 	
-	module.exports = {
+	var Executor = {
+	    VERSION: _package2.default.version,
+	    AUTHOR: _package2.default.author,
+	    LICENSE: _package2.default.license,
+	
 	    setup: function setup() {
 	        var $instances = window.document.querySelectorAll('.executor-code');
 	
@@ -93,16 +101,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	                settings.timeout = Number($instance.dataset.timeout);
 	            }
 	
-	            return new _executor2.default($instance, settings);
+	            return new _executorManager2.default($instance, settings);
 	        });
 	    }
 	};
+	
+	module.exports = Executor;
 
 /***/ },
 /* 1 */
-/*!*********************************!*\
-  !*** ./lib/scripts/executor.js ***!
-  \*********************************/
+/*!*****************************************!*\
+  !*** ./lib/scripts/executor-manager.js ***!
+  \*****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -390,8 +400,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var Babel = __webpack_require__(/*! babel-standalone */ 301);
-	
-	// Support ES6 generators.
 	
 	var ExecuteManager = function () {
 	    function ExecuteManager() {
@@ -66730,16 +66738,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	var _package = __webpack_require__(/*! ../../../package.json */ 311);
 	
-	var pkg = __webpack_require__(/*! ../../../package.json */ 311);
+	var _package2 = _interopRequireDefault(_package);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var VersionLabel = function VersionLabel() {
 	    _classCallCheck(this, VersionLabel);
 	
 	    this.$el = window.document.createElement('i');
 	    this.$el.classList.add('executor-version-label');
-	    this.$el.innerHTML = pkg.version;
+	    this.$el.innerHTML = _package2.default.version;
 	};
 	
 	exports.default = VersionLabel;
@@ -66754,6 +66766,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		"name": "executor",
 		"version": "0.9.4",
+		"author": {
+			"name": "Piotr Kowalski",
+			"email": "piecioshka@gmail.com",
+			"url": "http://piecioshka.pl/"
+		},
 		"scripts": {
 			"clear": "rm -rf node_modules/ bower_components/",
 			"lint": "eslint lib/scripts/",
