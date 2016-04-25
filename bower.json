@@ -1,0 +1,38 @@
+{
+    "name": "executor",
+    "description": "Display and evaluate your JavaScript code.",
+    "main": [
+        "lib/index.js"
+    ],
+    "moduleType": [
+        "es6"
+    ],
+    "authors": [
+        {
+            "name": "Piotr Kowalski",
+            "email": "piecioshka@gmail.com",
+            "homepage": "http://piecioshka.pl/"
+        }
+    ],
+    "devDependencies": {
+        "ace-builds": "~1.2.0"
+    },
+    "keywords": [
+        "executor",
+        "highlight",
+        "syntax",
+        "evaluate",
+        "javascript",
+        "code",
+        "babel",
+        "ace",
+        "editor",
+        "embed"
+    ],
+    "homepage": "http://piecioshka.github.io/executor/",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/piecioshka/executor.git"
+    },
+    "license": "MIT"
+}
