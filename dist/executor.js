@@ -66065,7 +66065,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 		"name": "executor-editor",
-		"version": "0.9.5",
+		"version": "0.9.6",
+		"description": "Display and evaluate your JavaScript (ES2015) code",
+		"homepage": "http://piecioshka.github.io/executor/demo",
+		"main": "lib/index.js",
 		"author": {
 			"name": "Piotr Kowalski",
 			"email": "piecioshka@gmail.com",
@@ -66073,7 +66076,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		"scripts": {
 			"clear": "rm -rf node_modules/ dist/",
-			"lint": "eslint lib/scripts/ 2> /dev/null",
+			"lint": "eslint lib/scripts/",
 			"build": "webpack --profile",
 			"watch": "webpack -w",
 			"deploy": "node ./tasks/deploy.js"
@@ -66088,7 +66091,6 @@ return /******/ (function(modules) { // webpackBootstrap
 			"babel-preset-stage-0": "^6.5.0",
 			"babel-standalone": "^6.7.7",
 			"css-loader": "^0.19.0",
-			"del": "^2.2.0",
 			"eslint": "^1.10.3",
 			"eslint-config-piecioshka": "^1.0.9",
 			"eslint-loader": "^1.3.0",
@@ -66108,7 +66110,9 @@ return /******/ (function(modules) { // webpackBootstrap
 			"babel",
 			"ace",
 			"editor",
-			"embed"
+			"embed",
+			"slides",
+			"presentation"
 		],
 		"eslintConfig": {
 			"extends": "piecioshka",
@@ -66121,7 +66125,8 @@ return /******/ (function(modules) { // webpackBootstrap
 		},
 		"files": [
 			"demo",
-			"lib"
+			"lib",
+			"README.md"
 		],
 		"repository": {
 			"type": "git",
