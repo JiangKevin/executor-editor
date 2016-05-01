@@ -65498,6 +65498,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _classCallCheck(this, ExecuteButton);
 	
 	        this.$el = null;
+	        this.$button = null;
 	
 	        this.compile();
 	    }
@@ -65505,15 +65506,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(ExecuteButton, [{
 	        key: 'compile',
 	        value: function compile() {
-	            this.$el = window.document.createElement('input');
-	            this.$el.type = 'button';
-	            this.$el.classList.add('executor-execute');
-	            this.$el.value = 'Execute';
+	            this.$el = window.document.createElement('label');
+	            this.$button = window.document.createElement('input');
+	            this.$button.type = 'button';
+	            this.$button.classList.add('executor-execute');
+	            this.$button.value = 'Execute';
+	            this.$el.appendChild(this.$button);
 	        }
 	    }, {
 	        key: 'setup',
 	        value: function setup(callback) {
-	            this.$el.addEventListener('click', callback);
+	            this.$button.addEventListener('click', callback);
 	        }
 	    }]);
 	
